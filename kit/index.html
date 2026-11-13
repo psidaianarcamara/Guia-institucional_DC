@@ -105,6 +105,11 @@ details[open] summary::after{content:"−"}
 details p{margin:12px 0 0;color:#4a2610}
 /* final */
 .final{text-align:left}
+.inclui{list-style:none;margin:20px 0 6px;padding:0;display:grid;gap:12px}
+.inclui li{position:relative;padding-left:36px;line-height:1.4}
+.inclui li::before{content:"";position:absolute;left:0;top:.1em;width:20px;height:20px;border:2px solid var(--marrom);border-radius:3px}
+.inclui li::after{content:"";position:absolute;left:7px;top:.1em;width:6px;height:13px;border:solid var(--terracota);border-width:0 3px 3px 0;transform:rotate(40deg)}
+.inclui-extra{margin:0 0 22px;padding-left:36px;color:var(--suave)}
 .regua{margin-top:48px}
 .regua .ext{display:flex;justify-content:space-between;font-family:var(--serif);font-style:italic;font-size:1.6rem}
 .regua svg{width:100%;height:24px;display:block}
@@ -264,7 +269,15 @@ footer{border-top:1px solid var(--areia);padding-block:28px;font-size:.88rem;col
 <section id="oferta"><div class="wrap estreito final">
   <div class="rot">Kit Consultório do Zero</div>
   <h2>6 ferramentas <em>pelo preço de uma.</em></h2>
-  <p>Apresentação, contrato, calculadora, exercícios de TCC, monitor de evolução, documentos psicológicos e o guia de uso.</p>
+  <ul class="inclui">
+    <li>Apresentação para o primeiro contato</li>
+    <li>Calculadora do valor da sessão</li>
+    <li>Contrato psicoterapêutico com aceite pelo WhatsApp</li>
+    <li>Exercícios de Terapia Cognitivo-Comportamental (TCC), com formulação de caso</li>
+    <li>Monitor de evolução</li>
+    <li>Documentos psicológicos</li>
+  </ul>
+  <p class="inclui-extra">E mais: guia de uso em PDF.</p>
   <div class="preco"><b class="js-preco">R$ 67</b><span class="js-preco-nota">valor de lançamento até 20/11. Depois, <s>R$ 97</s>.</span></div>
   <div class="contagem js-contagem" hidden>O valor de lançamento termina em <b class="js-falta"></b>.</div>
   <a class="btn comprar js-checkout" href="#">Quero o kit</a>
