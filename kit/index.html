@@ -320,6 +320,8 @@ footer{border-top:1px solid var(--areia);padding-block:28px;font-size:.88rem;col
 <script>
 /* ===== CONFIGURAÇÃO =====
    1. Cole aqui o link de pagamento da Kiwify, entre as aspas. */
+/* Sempre abrir a página no topo, mesmo ao recarregar depois de tocar em "Quero o kit" */
+try{ if("scrollRestoration" in history) history.scrollRestoration="manual"; if(location.hash){ history.replaceState(null,"",location.pathname+location.search); } window.scrollTo(0,0); }catch(e){}
 var LINK_KIWIFY = "https://pay.kiwify.com.br/rvVyu9Q";
 /* 2. Fim do valor de lançamento (horário de Brasília). Depois disso a página mostra R$ 97 sozinha. */
 var FIM_LANCAMENTO = new Date("2026-11-20T23:59:59-03:00");
